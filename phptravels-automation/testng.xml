@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PHPTravels Parallel Suite" parallel="methods" thread-count="5">
+    <listeners>
+        <listener class-name="listeners.AnnotationTransformer"/>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+    <test name="PHPTravels Regression Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>
